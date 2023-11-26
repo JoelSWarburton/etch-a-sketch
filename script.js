@@ -12,6 +12,11 @@ for(let i = 0; i < gridSize; i++) {
         const cell = document.createElement("div"); 
         cell.classList.add("cell")
         rowDiv.appendChild(cell);
+        
+        cell.addEventListener("mouseover", (e) => {
+            console.log(e)
+            cell.classList.add("colored")
+        });
 
     }
     container.appendChild(rowDiv);
