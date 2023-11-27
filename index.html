@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Etch-a-sketch</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
+  <head>
+    <title>Etch-a-sketch</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header><h1>Etch-A-Sketch</h1></header>
+    <div class="container">
+      <div class="option-panel">
+        <fieldset id="color-mode">
+            <legend>Select Color Mode:</legend>
 
-        <div id="canvas"></div>
+        <label for="black-mode">Black
+        <input type="radio" value="black" id="black-mode" name="mode" checked></label>
 
-        <script src="./script.js"></script>
-    </body>
+        <label for="rainbow-mode">Rainbow
+        <input type="radio" value="rainbow" id="rainbow-mode" name="mode"></label>
+
+        <label for="shading-mode">Shading
+        <input type="radio" value="shading" id="shading-mode" name="mode"></label>
+    </fieldset>
+      </div>
+      <div id="canvas"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
