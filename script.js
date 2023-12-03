@@ -10,6 +10,9 @@ colorModes.forEach((elem) => {
 });
 
 
+
+const initGrid = function() {
+    
 for(let i = 0; i < gridSize; i++) {
 
     const rowDiv = document.createElement("div");
@@ -31,7 +34,7 @@ for(let i = 0; i < gridSize; i++) {
 
 
 }
-
+}
 
 function updateMode() {
     console.log("updating")
@@ -67,3 +70,14 @@ function colorCell(cell) {
         cell.style.backgroundColor = "rgb( " +colors[0] + "," + colors[1] + "," + colors[2] + ")";
     }
 }
+
+
+const updateGridSize = function(e) {
+    document.querySelector("#grid-label").textContent = e.target.value;
+    gridSize = e.target.value;
+    container.textContent = "";
+    initGrid();
+}
+
+document.querySelector("#grid-size-slider").addEventListener("change", (e) => {updateGridSize(e)});
+initGrid();
