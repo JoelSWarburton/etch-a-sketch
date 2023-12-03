@@ -13,23 +13,46 @@
 
         <fieldset>
           <legend>Grid Size:</legend>
-          <label id="grid-label" for="grid-size-slider">16</label>
-          <input type="range" min="2" max="100" value="16" id="grid-size-slider">
-          
+
+          <input
+            type="range"
+            min="2"
+            max="100"
+            value="16"
+            id="grid-size-slider"
+          />
+          <label id="grid-label" for="grid-size-slider">16 x 16</label>
         </fieldset>
 
         <fieldset id="color-mode">
-            <legend>Select Color Mode:</legend>
+          <legend>Select Color Mode:</legend>
 
-        <label for="black-mode">Black
-        <input type="radio" value="black" id="black-mode" name="mode" checked></label>
+          <label for="black-mode"
+            >Black
+            <input
+              type="radio"
+              value="black"
+              id="black-mode"
+              name="mode"
+              checked
+          /></label>
 
-        <label for="rainbow-mode">Rainbow
-        <input type="radio" value="rainbow" id="rainbow-mode" name="mode"></label>
+          <label for="rainbow-mode"
+            >Rainbow
+            <input type="radio" value="rainbow" id="rainbow-mode" name="mode"
+          /></label>
 
-        <label for="shading-mode">Shading
-        <input type="radio" value="shading" id="shading-mode" name="mode"></label>
-    </fieldset>
+          <label for="shading-mode"
+            >Shading
+            <input type="radio" value="shading" id="shading-mode" name="mode"
+          /></label>
+        </fieldset>
+        <fieldset>
+          <label for="toggle-border">Toggle Border:</label>
+          <input type="checkbox" id="toggle-border" />
+        </fieldset>
+
+        <button id="clear-btn">Clear Canvas</button>
       </div>
       <div id="canvas"></div>
     </div>
